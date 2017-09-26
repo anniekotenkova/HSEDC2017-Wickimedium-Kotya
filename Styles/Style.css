@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption');
+
+  body{
+    width: 700px;
+    margin: 0 auto;
+  }
+  h1 + p {color: grey;
+    font-family: "PT Sans",sans-serif;
+    font-size: 23px;
+    line-height: 25px;
+    margin-top: 10px;}
+  h1 {
+    font-family: "PT Sans",sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 70px;
+  }
+  h2 {
+    font-family: "PT Sans",sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 60px;
+  }
+  h3 {
+    font-family: "PT Sans",sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 60px;
+  }
+  a {color:black;}
+  p {
+    font-family: "PT Sans",sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+    margin-top: 30px;
+  }
+  q{
+    font-family: "PT Sans",sans-serif;
+    font-size:20px;
+    font-style: italic;
+    font-weight: lighter;"}
+  ul {
+    font-family: "PT Sans",sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+  }
