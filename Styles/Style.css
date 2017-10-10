@@ -1,64 +1,82 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption');
-  img {
+
+  body
+  {
+    font-family: "PT Sans",sans-serif;
+    background-image: url(../images/dc-online-media-mockup.jpg);
+    background-size: 800px 20624px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 65px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  img
+  {
     display: block;
     width: 1020px;
     margin: 80px auto;
   }
-  h1, h2, h3, p, ul, a
+  h1, h2, h3 {
+    font-family: "PT Sans Caption",sans-serif;
+    font-weight: bold;
+  }
+  h1
   {
-    width: 700px;
-    margin: 0 auto;
+    font-size: 40px;
+    line-height: 46px;
   }
-  h1 + p {
-    font-family: "PT Sans",sans-serif;
-    font-size: 30px;
-    line-height: 25px;
-    margin-top: 5px;
-    color: grey;}
-  h2 + p {
-    margin-top: 10px;
+  h1 + p
+  {
+    color: rgba(0, 0, 0, .4);
+    font-family: "PT Sans Caption",sans-serif;
+    font-size: 22px;
+    line-height: 32px;
   }
-  h3 + p {
-    margin-top: 10px;
-  }
-  h1 {
-    font-family: "PT Sans",sans-serif;
-    font-size: 45px;
+  h2
+  {
+    font-size: 32px;
     font-weight: bold;
-    margin-top: 65px;
+    margin-top: 43px;
+    line-height: 36px;
+
   }
-  h2 {
-    font-family: "PT Sans",sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 30px;
+  p {
+    font-size: 22px;
+    line-height: 34px;
+  }
+  p + p
+  {
+    margin-top: 29px;
   }
   h3 {
-    font-family: "PT Sans",sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 30px;
+    font-size: 29px;
+    margin-top: 20px;
+    line-height: 34px;
+  }
+  h2 + p {
+    margin-top: 7px;
+  }
+  h3 + p {
+    font-family: "PT Sans Caption",sans-serif;
+    margin-top: 7px;
   }
   .quote{
     width: 700px;
-    font-family: "PT Sans",sans-serif;
-    font-size:20px;
+    font-size:22px;
+    line-height: 34px;
     font-style: italic;
     font-weight: lighter;
     margin-top: 10px;
-    border-left: 2px solid black;
-    padding-left: 20px;
-    margin-left: 270px;
+    border-left: 3px solid black;
+    padding-left: 15px;
+    margin-left: -19px;
+
   }
   a {color:black;}
-  p {
-    font-family: "PT Sans",sans-serif;
-    font-size: 20px;
-    line-height: 25px;
-    margin-top: 30px;
-  }
   ul{
-    font-family: "PT Sans",sans-serif;
     font-size: 20px;
     line-height: 25px;
     margin-top: 30px;
