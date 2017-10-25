@@ -23,6 +23,7 @@
     font-family: "PT Sans Caption",sans-serif;
     font-weight: bold;
   }
+  a {color:black;}
   h1
   {
     font-size: 40px;
@@ -43,7 +44,7 @@
     line-height: 36px;
 
   }
-  p {
+  p , div {
     font-size: 22px;
     line-height: 34px;
   }
@@ -53,15 +54,17 @@
   }
   h3 {
     font-size: 29px;
-    margin-top: 20px;
+    margin-top: 34px;
     line-height: 34px;
   }
   h2 + p {
     margin-top: 7px;
   }
   h3 + p {
-    font-family: "PT Sans Caption",sans-serif;
+    font-size: 22px;
+    font-family: "PT Sans",sans-serif;
     margin-top: 7px;
+    line-height: 34px;
   }
   .quote{
     width: 700px;
@@ -69,13 +72,12 @@
     line-height: 34px;
     font-style: italic;
     font-weight: lighter;
-    margin-top: 10px;
+    margin-top: 32px;
     border-left: 3px solid black;
     padding-left: 15px;
     margin-left: -19px;
 
   }
-  a {color:black;}
   ul{
     font-size: 20px;
     line-height: 25px;
