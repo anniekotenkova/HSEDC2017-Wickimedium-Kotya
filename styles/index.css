@@ -1,10 +1,13 @@
+@import "https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&amp;subset=cyrillic";
+
 body.landing * /* селектор, который применяется к каждому элементу*/
 {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
-body.landing .menubar /* изменила. наш вариант мне нравится больше. */{
+.menubar /* изменила. наш вариант мне нравится больше. */
+{
   position: fixed;
   width: 100%;
   top: 0;
@@ -28,22 +31,27 @@ body.landing .menubar /* изменила. наш вариант мне нрав
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  width: 100%; /* изменила на 100%, т.к размер экрана Захара стоит 1440px и типа если
-  открывать на больших экранах то видны box-shadow, а это задофига некрасиво!!! */
+  width: 1440px;
   margin: 0 auto;
-  /*box-shadow: 0 0 10px 0 rgba(0,0,0,.1);*/
-  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+}
+
+.mainSection section {
+  position: absolute;
+  top: 147px;
+  width: 580px;
 }
 
 .mainSection {
   position: relative;
-  width: 100vw;
+  width: 1440px;
   height: 800px;
   overflow: hidden;
 }
 
 .mainSection h2 {
   font-family: 'PT Sans Caption', sans-serif;
+  font-weight: bold;
   font-size: 36px;
   line-height: 46px;
 }
@@ -57,6 +65,7 @@ body.landing .menubar /* изменила. наш вариант мне нрав
 .mainSection.center {
   text-align: center;/*выравниевание текста в пределах элемента по центру*/
   background-color: #FCFCFC;
+  width: 100%;
 }
 
 .mainSection.center h2 {
@@ -65,26 +74,18 @@ body.landing .menubar /* изменила. наш вариант мне нрав
 }
 
 .mainSection.center p {
-  margin-top: 27px;
-}
-
-.mainSection.center section {
-  top: 180px;
   width: 100%;
-}
-
-.mainSection section {
-  position: absolute;
-  top: 147px;
-  width: 580px;
+  text-align: center;
+  margin-top: 27px;
 }
 
 .mainSection.left section {
   left: 160px;
 }
 
-.mainSection.right section {
-  right: 160px;
+.mainSection.left section figure {
+  right: -116px;
+  /*margin-left: -60px;*/
 }
 
 .mainSection section figure {
@@ -94,8 +95,15 @@ body.landing .menubar /* изменила. наш вариант мне нрав
   background-image: url(../img/pattern.svg);
 }
 
-.mainSection.left section figure {
-  margin-left: -60px;
+.mainSection.center section {
+  top: 180px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.mainSection.right section {
+  right: 160px;
 }
 
 .mainSection.right section figure {
@@ -128,8 +136,10 @@ body.landing .menubar /* изменила. наш вариант мне нрав
   background-size: cover;
 }
 
+
+
 #mockup1 {
-  top: 115px;
+  top: 343px;
   right: -116px;
   width: 732px;
   height: 660px;
@@ -154,16 +164,13 @@ body.landing .menubar /* изменила. наш вариант мне нрав
   box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
 }
 
-@media screen and (min-width: 1460px)/*исправила max-width на min-width потому что это ни в какие ворота не лезет!!!!!1" */ {
+/*@media screen and (min-width: 1460px)/*исправила max-width на min-width потому что это ни в какие ворота не лезет!!!!!1"  {
   .landingWrapper {
     width: 100%;
   }
-}
+}*/
 
 @media screen and (max-width: 1180px) {
-  body.landing.bg {
-    background-image: url(../img/index_mockup_ipad.png);
-  }
 
   .mainSection {
     width: 1180px;
@@ -196,11 +203,11 @@ body.landing .menubar /* изменила. наш вариант мне нрав
   }
 
   .mainSection.left section {
-    left: 100px; /*исправила размер, иначе картинки наплывают на текст */
+    left: 190px; /*исправила размер, иначе картинки наплывают на текст */
   }
 
   .mainSection.right section {
-    right: 100px; /*исправила размер, иначе картинки наплывают на текст */
+    right: 190px; /*исправила размер, иначе картинки наплывают на текст */
   }
 
   .mainSection.center section {
@@ -228,105 +235,117 @@ body.landing .menubar /* изменила. наш вариант мне нрав
   .mainSection.center section nav a {
     margin: 0 6px;
   }
-  @media screen and (max-width: 1023px) /*тоже самое. какая-то тут дичь вообще с разными экранами */{
-    body.landing.bg {
-      background-image: url(../images/index_mockup_ipad_portrait.png);
-    }
 
-    .full {
-      display: none;
-    }
-
-    .compact {
-      display: block;
-    }
-
-    .mainSection {
-      width: 910px;
-      height: 1024px;
-    }
-
-    .mainSection h2 {
-      font-size: 36px;
-      line-height: 46px;
-    }
-
-    .mainSection p {
-      margin-top: 21px;
-      font-size: 26px;
-      line-height: 38px;
-    }
-
-    .mainSection.center h2 {
-      font-size: 36px;
-      line-height: 46px;
-    }
-
-    .mainSection.center p {
-      margin-top: 35px;
-    }
-
-    .mainSection section {
-      top: 90px;
-      width: 580px;
-    }
-
-    .mainSection.left section,
-    .mainSection.right section {
-      left: 165px;
-    }
-
-    .mainSection.center section {
-      top: 260px;
-    }
-
-    .mainSection section figure {
-      width: 210px;
-      height: 20px;
-      margin-top: 50px;
-    }
-
-    .mainSection.left section figure,
-    .mainSection.right section figure {
-      margin-left: -60px;
-    }
-
-    .mainSection:nth-child(3) /* используется для добавления стиля к элементам на основе нумерации в дереве элементов. */ section figure {
-      margin-left: 430px;
-    }
-
-    .mainSection.center section nav {
-      margin-top: 130px;
-    }
-
-    .mainSection.center section nav a {
-      margin: 0 10px;
-    }
-
-    #mockup1 /* применяется к id. Id – уникальное собственное имя элемента на странице,
-    то есть на странице не должно быть нескольких элементов с одним id.
-    Например блоку с шапкой сайта можно дать id="title" */ {
-      top: 375px;
-      right: -34px;
-      width: 621px;
-      height: 560px;
-    }
-
-    #mockup2 {
-      top: 415px;
-      left: 333px;
-      width: 464px;
-      height: 584px;
-    }
-
-    #mockup3 {
-      top: auto;
-      bottom: 0;
-      right: -30px;
-      width: 836px;
-      height: 483px;
-    }
+  #mockup1 {
+    top: 85px;
+    right: 0;
+    width: 521px;
+    height: 470px;
   }
+
+  #mockup2 {
+    top: 70px;
+    left: 148px;
+    width: 380px;
+    height: 478px;
+  }
+
+  #mockup3 {
+    top: 72px;
+    right: -444px;
+    width: 960px;
+    height: 555px;
+  }
+}
+
+@media screen and (max-width: 910px) {
+
+  .mainSection {
+    width: 910px;
+    height: 1024px;
+  }
+
+  .mainSection h2 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  .mainSection p {
+    margin-top: 21px;
+    font-size: 26px;
+    line-height: 38px;
+  }
+
+  .mainSection.center h2 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  .mainSection.center p {
+    margin-top: 35px;
+  }
+
+  .mainSection section {
+    top: 90px;
+    width: 580px;
+  }
+
+  .mainSection.left section,
+  .mainSection.right section {
+    left: 165px;
+  }
+
+  .mainSection.center section {
+    top: 260px;
+  }
+
+  .mainSection section figure {
+    width: 210px;
+    height: 20px;
+    margin-top: 50px;
+  }
+
+  .mainSection.left section figure,
+  .mainSection.right section figure {
+    margin-left: -60px;
+  }
+
+  .mainSection:nth-child(3) /* используется для добавления стиля к элементам на основе нумерации в дереве элементов. */ section figure {
+    margin-left: 430px;
+  }
+
+  .mainSection.center section nav {
+    margin-top: 130px;
+  }
+
+  .mainSection.center section nav a {
+    margin: 0 10px;
+  }
+
+  #mockup1 /* применяется к id. Id – уникальное собственное имя элемента на странице,
+  то есть на странице не должно быть нескольких элементов с одним id.
+  Например блоку с шапкой сайта можно дать id="title" */ {
+    top: 375px;
+    right: -34px;
+    width: 621px;
+    height: 560px;
+  }
+
+  #mockup2 {
+    top: 415px;
+    left: 333px;
+    width: 464px;
+    height: 584px;
+  }
+
+  #mockup3 {
+    top: auto;
+    bottom: 0;
+    right: -30px;
+    width: 836px;
+    height: 483px;
+  }
+}
 @media screen and (max-width: 620px) {
 
   .mainSection {
@@ -361,17 +380,19 @@ body.landing .menubar /* изменила. наш вариант мне нрав
   .mainSection.left section,
   .mainSection.right section {
     width: 100vw;
+    padding-right: 150px;
   }
 
   .mainSection.center section {
-    top: 60px;
+    top: 50px;
+    padding: 0 20px;
   }
 
   .mainSection.left section {
     left: 20px;
   }
   .mainSection.right section {
-    left: 10px;
+    left: 115px;
   }
 
   .mainSection section figure {
@@ -387,6 +408,10 @@ body.landing .menubar /* изменила. наш вариант мне нрав
     margin-left: 0px;
   }
 
+  .mainSection.center {
+    height: 700px;
+  }
+
   .mainSection.center section nav {
     margin-top: 30px;
   }
@@ -395,31 +420,27 @@ body.landing .menubar /* изменила. наш вариант мне нрав
     margin: 0 0 20px 0;
   }
 
-  .mainSection.center footer {
-    top: 570px;
-
-  }
-
 
   #mockup1 {
-    top: 390px;
-    right: -110px;
-    width: 420px;
-    height: 460px;
+    top: 200px;
+    right: -210px;
+    width: 320px;
+    height: 290px;
   }
 
   #mockup2 {
-    top: 415px;
-    left: 100px;
-    width: 424px;
-    height: 584px;
+    top: 140px;
+    bottom: 0;
+    right: -376px;
+    width: 452px;
+    height: 360px;
   }
 
   #mockup3 {
-    bottom: 0;
-    right: -330px;
-    width: 620px;
-    height: 483px;
+    top: 77px;
+    left: -307px;
+    width: 384px;
+    height: 527px;
   }
 }
 
